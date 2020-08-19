@@ -1,0 +1,14 @@
+# ----------------------------------------------------------
+# Spring Boot Config
+# ----------------------------------------------------------
+spring:
+  application:
+    name: Apartment Rental Management System
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+  mvc:
+    dispatch-options-request: true
+    
+server:
+  port: 8083
