@@ -1,6 +1,24 @@
 # Application Development - Apartment Lease Management System
 
-## Apartment Lease Management System cql scehma
+### Application functionality
+1. Create Apartment in a building
+2. Add facilities to apartment
+3. Update facilities to apartment
+4. Delete facilities from apartment.
+5. List facilities
+6. Update apartment availability for lease
+
+7. Create Guest details
+
+8. Create lease for apartment bewteen Guest and Lessor
+9. Transfer lease to new guest
+10. End lease aggreement before end date
+11. List all lease done for apartment
+
+12. List all leases for a customer.
+
+
+### Apartment Lease Management System cql scehma
 
 ```
 ⚠️⚠️⚠️ 
@@ -70,5 +88,33 @@ CREATE TABLE IF NOT EXISTS leasing_detail_by_guest (
 
 
 ⚠️⚠️⚠️
+```
+
+### Connect to DataStax Astra Cassandra cloud service.
+```
+In com.datastax.astrakathon.utils.DBConnection.java correct the SECURE_CONNECT_BUNDLE location. 
+secure-connect-killrvideocluster.zip is present in prohect root folder.
+```
+
+### Run application
+This is spring boot application connecting to Astra using SecureBundleConnect and using Spring-Data-Cassandra repository approach to connect to Cassandra.
+```
+	@Bean
+	public CqlSession cassandraSession() {
+	    CqlSession cqlSession = CqlSession.builder()
+				.withCloudSecureConnectBundle(Paths.get(DBConnection.SECURE_CONNECT_BUNDLE))
+				.withAuthCredentials(DBConnection.USERNAME, DBConnection.PASSWORD)
+				.withKeyspace(DBConnection.KEYSPACE)
+				.build();
+
+	    createSchemaIfNeeded(cqlSession);
+	    
+	    return cqlSession;
+	}
+```
+```
+Run: mvn spring-boot:run
+
+Go to localhost:8083 It will take to Swagger where all API's are defined.
 ```
 
