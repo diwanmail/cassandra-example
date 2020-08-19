@@ -93,12 +93,8 @@ CREATE TABLE IF NOT EXISTS leasing_detail_by_guest (
 ### Connect to DataStax Astra Cassandra cloud service.
 ```
 In com.datastax.astrakathon.utils.DBConnection.java correct the SECURE_CONNECT_BUNDLE location. 
-secure-connect-killrvideocluster.zip is present in prohect root folder.
-```
+secure-connect-killrvideocluster.zip is present in project root folder.
 
-### Run application
-This is spring boot application connecting to Astra using SecureBundleConnect and using Spring-Data-Cassandra repository approach to connect to Cassandra.
-```
 	@Bean
 	public CqlSession cassandraSession() {
 	    CqlSession cqlSession = CqlSession.builder()
@@ -112,6 +108,9 @@ This is spring boot application connecting to Astra using SecureBundleConnect an
 	    return cqlSession;
 	}
 ```
+
+### Run application
+This is spring boot application connecting to Astra using SecureBundleConnect and using Spring-Data-Cassandra repository approach to connect to Cassandra.
 ```
 Run: mvn spring-boot:run
 
