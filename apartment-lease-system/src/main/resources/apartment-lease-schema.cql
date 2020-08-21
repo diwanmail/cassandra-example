@@ -1,4 +1,3 @@
-CREATE KEYSPACE IF NOT EXISTS killrvideo WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
 
 CREATE TABLE IF NOT EXISTS apartments_by_buildling (
     building_name text,
