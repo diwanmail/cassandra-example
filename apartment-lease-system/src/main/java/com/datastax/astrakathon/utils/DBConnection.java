@@ -9,7 +9,7 @@ package com.datastax.astrakathon.utils;
 public interface DBConnection {
     
     // This is the Zip file you downloaded
-    String SECURE_CONNECT_BUNDLE = "C:\\tech\\java-ws\\apartment-lease-system\\secure-connect-killrvideocluster.zip";
+    String SECURE_CONNECT_BUNDLE = "secure-connect-killrvideocluster.zip";
 
     // This is the username, recommended value was KVUser
     String USERNAME = "KVUser";
