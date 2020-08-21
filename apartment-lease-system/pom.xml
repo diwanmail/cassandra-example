@@ -4,9 +4,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<groupId>com.datastax.astrakathon</groupId>
-	<artifactId>apartment-rental-system</artifactId>
+	<artifactId>apartment-lease-system</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>apartment-rental-system</name>
+	<name>apartment-lease-system</name>
 	<description>Cassandra AstraKathon Apartment rental system</description>
 	<packaging>jar</packaging>
 
@@ -96,13 +96,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
-		</dependency>
-
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.16.16</version>
-			<scope>provided</scope>
 		</dependency>
 
 		<dependency>

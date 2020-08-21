@@ -23,7 +23,7 @@ package com.datastax.astrakathon.doc;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.datastax.astrakathon.app.ApartmentRentalSystemApplication;
+import com.datastax.astrakathon.app.ApartmentLeaseSystemApplication;
 
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
@@ -63,7 +63,7 @@ public class DocumentationApiConfiguration {
         ApiInfoBuilder builder = new ApiInfoBuilder();
         builder.title("Apartment lease management system Backend API");
         builder.description("Start with Astra in Minute");
-        builder.version(ApartmentRentalSystemApplication.class.getPackage().getImplementationVersion());
+        builder.version(ApartmentLeaseSystemApplication.class.getPackage().getImplementationVersion());
         return builder.build();
     }
 }
